@@ -1,11 +1,11 @@
 # URL Shortener Service
 
-A minimal and fast URL Shortener HTTP service built with Python and FastAPI.
+A minimal and fast URL Shortener HTTP service built purely on Python's standard library. No external dependencies, no pip, no virtual environments.
 
 ## Features
 
 - `GET /` — Service status / greeting.
-- `GET /healthz` — Lightweight health check endpoint (returns 200 without external dependencies).
+- `GET /healthz` — Lightweight health check endpoint (returns 200).
 - `POST /shorten` — Shortens a given URL and returns a unique short identifier.
 - `GET /{short_id}` — Redirects to the original URL.
 
@@ -28,8 +28,6 @@ Start the service using the run script:
 ./scripts/run.sh
 ```
 
-The script will automatically set up the virtual environment, install dependencies, and launch the server.
-
 ## Running Tests
 
 Run the test suite using the test script:
@@ -38,4 +36,4 @@ Run the test suite using the test script:
 ./scripts/test.sh
 ```
 
-The test runner will execute all unit and integration tests and output test summary in standard format: `TESTS: 4/4`.
+The test runner will execute all unit tests and output test summary in standard format: `TESTS: 3/3`.

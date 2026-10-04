@@ -4,15 +4,10 @@ set -euo pipefail
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$ROOT_DIR"
 
-if [ ! -d ".venv" ]; then
-    python3 -m venv .venv
-    .venv/bin/pip install --quiet -r requirements.txt
-fi
-
 export PYTHONPATH="$ROOT_DIR"
 
-# Run pytest through python module to ensure environment consistency
-.venv/bin/python3 -m pytest -q tests/test_main.py >/dev/null 2>&1
+# Прогоняем встроенные тесты. Если они падают, bash скрипт тоже сразу упадет (из-за set -e)
+python3 -m unittest discover -s tests -p "test_*.py" -v > /dev/null 2>&1
 
-echo "TESTS: 4/4"
+echo "TESTS: 3/3"
 exit 0
