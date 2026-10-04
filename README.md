@@ -1,6 +1,7 @@
 # URL Shortener Service
 
-A minimal and fast URL Shortener HTTP service built purely on Python's standard library. No external dependencies, no pip, no virtual environments.
+## Overview
+A minimal and fast URL Shortener HTTP service built purely on Python's standard library. 
 
 ## Features
 
@@ -9,7 +10,7 @@ A minimal and fast URL Shortener HTTP service built purely on Python's standard 
 - `POST /shorten` — Shortens a given URL and returns a unique short identifier.
 - `GET /{short_id}` — Redirects to the original URL.
 
-## Configuration & Port
+## Configuration & PORT
 
 The service listens on the port specified by the `PORT` environment variable.
 If `PORT` is not defined, it defaults to port `8080`.
@@ -28,7 +29,7 @@ Start the service using the run script:
 ./scripts/run.sh
 ```
 
-## Running Tests
+## Testing
 
 Run the test suite using the test script:
 
