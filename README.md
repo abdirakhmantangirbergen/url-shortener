@@ -29,7 +29,7 @@ Start the service using the run script:
 ./scripts/run.sh
 ```
 
-## Testing
+## Running Tests / Test Suite
 
 Run the test suite using the test script:
 
