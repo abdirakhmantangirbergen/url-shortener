@@ -38,4 +38,3 @@ Run the test suite using the test script:
 ```
 
 The test runner will execute all unit tests and output test summary in standard format: `TESTS: 3/3`.
- 
