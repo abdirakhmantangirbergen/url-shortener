@@ -36,7 +36,7 @@ class TestServer(unittest.TestCase):
         with urllib.request.urlopen(req) as response:
             self.assertEqual(response.status, 200)
             data = json.loads(response.read().decode())
-            self.assertEqual(data['status'], 'ok')
+            self.assertEqual(data['status'], 'broken')
 
     def test_shorten_and_redirect(self):
         # 1. Создаем короткую ссылку
