@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: url-shortener-config
+data:
+  PORT: "8080"
+  GREETING: "URL Shortener API is running"

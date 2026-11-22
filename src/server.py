@@ -15,7 +15,8 @@ class ShortenerHandler(BaseHTTPRequestHandler):
 
     def do_GET(self):
         if self.path == '/':
-            self._send_response(200, 'application/json', b'{"message": "URL Shortener API is running"}')
+            msg = os.environ.get('GREETING', 'URL Shortener API is running')
+            self._send_response(200, 'application/json', json.dumps({"message": msg}).encode('utf-8'))
         elif self.path == '/healthz':
             self._send_response(200, 'application/json', b'{"status": "ok"}')
         else:
